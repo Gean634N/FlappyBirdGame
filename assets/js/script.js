@@ -12,5 +12,11 @@ window.addEventListener('load', () => {
   canvas.height = '450';
 
   const player = new Player(canvas.width, canvas.height, sprites);
-  player.draw(ctx);
+
+  const animate = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    player.draw(ctx);
+    requestAnimationFrame(animate);
+  };
+  animate();
 });

@@ -9,9 +9,11 @@ class Player {
     this.height = 26;
     this.sx = 0;
     this.frame = 0;
-
+    this.maxFrame = 2;
   }
   draw(context) {
+    if (this.frame < this.maxFrame) this.frame++;
+    else this.frame = 0;
     context.drawImage(
       this.image,
       this.sx, this.height * this.frame, // posição X e Y no sprite
