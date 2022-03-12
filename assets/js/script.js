@@ -1,5 +1,6 @@
 import Player from './player.js';
 import Floor from './floor.js';
+import Background from './background.js'
 
 window.addEventListener('load', () => {
   const loading = document.getElementById('loading');
@@ -14,6 +15,7 @@ window.addEventListener('load', () => {
 
   const player = new Player(canvas.width, canvas.height, sprites);
   const floor = new Floor(canvas.width, canvas.height, sprites);
+  const background = new Background(canvas.width, canvas.height, sprites);
 
   let lastTime = 0;
   const animate = (timeStamp) => {
@@ -22,6 +24,7 @@ window.addEventListener('load', () => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     player.draw(ctx, deltaTime);
+    background.draw(ctx);
     floor.draw(ctx);
     requestAnimationFrame(animate);
   };
