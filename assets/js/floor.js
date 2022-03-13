@@ -26,6 +26,27 @@ class Floor {
       this.x + this.width, this.y, // posição de destino
       this.width, this.height // tamanho do destino
     );
+    context.drawImage(
+      this.image,
+      this.sx, this.sy, // posição X e Y no sprite
+      this.width, this.height, // tamanho do recorte no sprite
+      this.x + this.width * 2, this.y, // posição de destino
+      this.width, this.height // tamanho do destino
+    );
+    context.drawImage(
+      this.image,
+      this.sx, this.sy, // posição X e Y no sprite
+      this.width, this.height, // tamanho do recorte no sprite
+      this.x + this.width * 3, this.y, // posição de destino
+      this.width, this.height // tamanho do destino
+    );
+    context.drawImage(
+      this.image,
+      this.sx, this.sy, // posição X e Y no sprite
+      this.width, this.height, // tamanho do recorte no sprite
+      this.x + this.width * 4, this.y, // posição de destino
+      this.width, this.height // tamanho do destino
+    );
   }
 };
 

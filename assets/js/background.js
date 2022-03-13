@@ -12,6 +12,9 @@ class Background {
   }
 
   draw(context) {
+    context.fillStyle = '#70c5ce';
+    context.fillRect(0, 0, this.gameWidth, this.gameHeight)
+
     context.drawImage(
       this.image,
       this.sx, this.sy, // posição X e Y no sprite
@@ -24,6 +27,20 @@ class Background {
       this.sx, this.sy, // posição X e Y no sprite
       this.width, this.height, // tamanho do recorte no sprite
       this.x + this.width, this.y, // posição de destino
+      this.width, this.height // tamanho do destino
+    );
+    context.drawImage(
+      this.image,
+      this.sx, this.sy, // posição X e Y no sprite
+      this.width, this.height, // tamanho do recorte no sprite
+      this.x + this.width * 2, this.y, // posição de destino
+      this.width, this.height // tamanho do destino
+    );
+    context.drawImage(
+      this.image,
+      this.sx, this.sy, // posição X e Y no sprite
+      this.width, this.height, // tamanho do recorte no sprite
+      this.x + this.width * 3, this.y, // posição de destino
       this.width, this.height // tamanho do destino
     );
   }
